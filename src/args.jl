@@ -364,6 +364,8 @@ const _axis_defaults = KW(
     :tickfontvalign         => :vcenter,
     :tickfontrotation       => 0.0,
     :tickfontcolor          => :match,
+    :foreground_color_tick              => :match,
+    :foreground_color_minortick         => :match,
     :guidefontfamily         => :match,
     :guidefontsize           => 11,
     :guidefonthalign         => :hcenter,
@@ -1284,6 +1286,8 @@ const _match_map2 = KW(
     :fontfamily_subplot       => :fontfamily,
     :tickfontfamily           => :fontfamily_subplot,
     :guidefontfamily          => :fontfamily_subplot,
+    :foreground_color_tick                => :foreground_color_subplot,
+    :foreground_color_minortick           => :foreground_color_subplot
 )
 
 # properly retrieve from plt.attr, passing `:match` to the correct key
@@ -1467,6 +1471,8 @@ function _update_axis_colors(axis::Axis)
     color_or_nothing!(axis.plotattributes, :foreground_color_text)
     color_or_nothing!(axis.plotattributes, :foreground_color_grid)
     color_or_nothing!(axis.plotattributes, :foreground_color_minor_grid)
+    color_or_nothing!(axis.plotattributes, :foreground_color_tick)
+    color_or_nothing!(axis.plotattributes, :foreground_color_minortick)
     return
 end
 
