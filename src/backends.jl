@@ -354,6 +354,7 @@ const _gr_seriestype = [
     :wireframe,
     :volume,
     :shape,
+    :hexbin,
 ]
 const _gr_style = [:auto, :solid, :dash, :dot, :dashdot, :dashdotdot]
 const _gr_marker = _allMarkers
